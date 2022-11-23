@@ -1,0 +1,311 @@
+body,html{
+    height: 200vh;
+    background-color: rgb(253, 253, 253);
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Montserrat',sans-serif;
+}
+
+
+
+body {
+    display: grid;
+    grid-template-columns: 33.3% 33.3% auto ;
+    grid-template-rows: 5% 50% 10% 20% 20% 30% 40% ;
+    grid-template-areas:
+    "nav nav nav"
+    "main1 main2 main3"
+    "tussen tussen tussen"
+    "kleur kleur kleur"
+    "main4 main4 main4"
+    "spot spot spot"
+    "footer footer footer"
+}
+
+
+
+
+nav{
+    background-color: rgb(255, 255, 255);
+    justify-content: space-around;
+    display: flex;
+    top: 2vh;
+    grid-area: nav;
+    /**min-height: 2vh;   vraag */
+    align-items: center;
+    z-index: 9;
+}
+
+
+
+
+.menu {
+    justify-content: space-around;
+    display: contents;    /** vraaag */
+    list-style: none;
+    width: 50%;
+}
+
+
+
+.menu a{ /** basics dingen toevoegen */
+    text-decoration: none;
+    color: rgb(68, 67, 67);
+    letter-spacing: 3px;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+.burger div{
+    width: 40px;
+    height: 3.5px;
+    letter-spacing: 1px;
+    margin: 5px;
+    margin-top: 5px;
+    background-color: rgb(21, 20, 22);
+    display: none;
+}
+
+
+
+
+
+
+.box1{
+    grid-area: main1;
+    background-image: url("4e.png");
+    background-size: cover;
+
+    transition: transform 0.5s ease;
+    width: 100%;
+    /* background-repeat: no-repeat; */
+
+}
+
+
+
+.box1:hover{
+    opacity: 50%;
+    transform: scale(1.2);
+}
+
+
+
+.box2{
+    grid-area: main2;
+    background-image: url("2e.png");
+    background-size: cover;
+    overflow: hidden;
+    transition: transform 0.5s ease;
+    width: 100%;
+}
+.box2:hover{
+    opacity: 50%;
+    transform: scale(1.2);
+}
+
+.box3{
+    grid-area: main3;
+    background-image: url("3e.png");
+    background-size: cover;
+    transition: transform 0.5s ease;
+    width: 100%;
+    overflow: hidden;
+}
+.box3:hover{
+    opacity: 50%;
+    transform: scale(1.2);
+}
+
+.font{
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: xx-large;
+    margin: 170px 20px 20px 80px;
+    transition: transform 1.5s ease;
+    color: rgb(253, 253, 253);
+    padding: 20px;
+    outline: 3px solid white;
+    position: absolute;
+    text-decoration: none;
+    /* color: inherit; */
+}
+
+
+
+.font:hover{
+    transform: scale(1.2);
+}
+
+.font1{
+    font-family: futura-pt, sans-serif;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 20px;
+    border: 3px solid white;
+    border-color: white;
+    margin: 350px 20px 20px 80px;
+    transition: transform 1.5s ease;
+    color: rgb(253, 253, 253);
+    padding: 20px;
+    outline: 3px solid white;
+    position: absolute;
+}
+
+.font1:hover{
+    transform: scale(1.1);
+}
+
+.wit{
+    font-size: 36px;
+    font-weight: bold;
+    font-family: 'Coda Caption', sans-serif;
+    color: rgb(21, 82, 51);
+    margin: 175px 200px 20px 100px;
+    position: relative;
+}
+
+
+.actor{
+    font-family:'Kalam', cursive;
+    font-size: 24px;
+    color: white;
+    margin: 50px 200px 0px 700px;
+}
+
+
+.tussen{
+    grid-area: tussen;
+    background-color: white;
+    width: 100%;
+    height: 80px;
+    z-index: 2;
+}
+
+.kleur{
+    grid-area: kleur;
+    width: 100%;
+    height: 600px;
+    background-color: rgb(218, 217, 216);
+    z-index: 2;
+}
+
+
+
+.kelder{
+    grid-area: main4;
+    background-color: rgb(175, 37, 37);
+    width: 100%;
+    height: 120px;
+}
+
+
+
+
+
+
+
+.footer{
+    align-items: center;
+    justify-content: space-around;
+    display: flex;
+    background: rgb(83, 83, 83);
+    grid-area: footer;
+}
+
+
+
+
+
+.spot{
+    z-index: 111;
+    grid-area:spot;
+}
+
+
+.foter{
+    height: 22vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 40px;
+    flex-direction: column;
+    text-decoration: none;
+}
+
+
+
+.footerfont{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    background: greenyellow;
+}
+
+
+
+
+
+ .fot{
+    list-style: none;
+    margin: 0 0 24px 0;
+    color: rgb(168, 168, 168);
+}
+
+
+
+
+
+.foto{
+    grid-area: foto;
+    background-image: url("foto.png");
+    height: 100%;
+    position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+
+
+
+
+/* @media screen and(max-width: 1024px){
+    .uls{
+        width: 80%;
+    }
+} */
+
+@media (max-width : 900px){  /**  als je veel zoomt  */
+    body{
+    overflow-y: hidden;
+   }
+
+   .menu{ 
+       position: fixed;
+       background-color: rgb(6, 6, 7);
+       height:94vh ;
+       width:100% ;
+       right: 0px;
+       top: 8.3vh;     
+       align-items: flex-start;
+       flex-direction: column;
+       transition: transform 0.5s ease-in;
+       transform: translateY(100%);
+       display: flex;
+   }
+
+   .burger{
+       display: block;
+   }
+}
+
+
+
+
+.actie{
+    transform: translateY(0%);
+}
